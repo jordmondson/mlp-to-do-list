@@ -16,9 +16,10 @@ class TaskFactory extends Factory
      */
     public function definition()
     {
+        $completed = $this->faker->boolean;
         return [
             'name' => $this->faker->text,
-            'completed' => $this->faker->boolean,
+            'completed_at' => $completed ? $this->faker->dateTime : null,
         ];
     }
 }
