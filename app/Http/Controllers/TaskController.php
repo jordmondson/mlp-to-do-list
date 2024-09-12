@@ -30,7 +30,6 @@ class TaskController extends Controller
     {
         Task::query()->create([
             'name' => $request->name,
-            'completed_at' => Carbon::now(),
         ]);
 
         return back();
@@ -57,7 +56,7 @@ class TaskController extends Controller
      */
     public function complete($id)
     {
-        Task::query()->where('id', $id)->update(['completed' => true]);
+        Task::query()->where('id', $id)->update(['completed_at' => Carbon::now()]);
 
         return back();
     }
