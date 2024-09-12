@@ -1,0 +1,53 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #f1f1f1;
+}
+#content {
+    max-width: 60%;
+    margin: auto;
+}
+.row {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.row:before {
+    margin-left: -40px;
+}
+
+#left-panel {
+    flex-basis: 40%;
+}
+
+#right-panel {
+    background-color: white;
+    padding: 20px 30px;
+}
+
+#add-button {
+    margin-top: 9px;
+}
+
+#actions {
+    display: flex;
+    column-gap: 5px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+header {
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 100px;
+    text-align: center;
+}
