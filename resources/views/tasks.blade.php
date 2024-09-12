@@ -25,9 +25,9 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($tasks as $task)
+                @foreach($tasks as $index => $task)
                     <tr>
-                        <th scope="row">{{ $task->id }}</th>
+                        <th scope="row">{{ $index + 1 }}</th>
                         <td class="{{ $task->completed_at ? 'completed' : ''  }}">{{ $task->name }}</td>
                         <td>
                             <div id="actions">
