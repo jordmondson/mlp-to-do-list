@@ -7,7 +7,13 @@
                 {{ csrf_field() }}
 
                 <div class="input-group mb-3 w-100">
-                    <input type="text" class="form-control w-100" placeholder="Insert task name" aria-label="Task name" name="name">
+                    <input type="text" class="form-control w-100" placeholder="Insert task name" aria-label="Task name" name="name" required>
+
+                    @if ($errors->any())
+                        @foreach ($errors->all() as $error)
+                            <div>{{$error}}</div>
+                        @endforeach
+                    @endif
                 </div>
 
                 <div class="form-group">
